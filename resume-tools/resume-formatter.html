@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Format your resume for ATS systems - clean formatting, proper structure, and ATS-friendly layout. All processing happens in your browser. Your resume never leaves your device.">
+    <meta name="keywords" content="resume formatter, ats resume format, resume formatting, resume structure">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Resume Formatter - Format Your Resume for ATS Systems">
+    <meta property="og:description"
+        content="Format and structure your resume for maximum ATS readability. Clean formatting for better parsing.">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Resume Formatter">
+
+    <title>Resume Formatter Free - Format Resume for ATS Systems | Privacy-First</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="canonical" href="https://utilitytools.com/resume-tools/resume-formatter.html">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="../" class="logo">Utility Tools</a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../">Home</a></li>
+                <li><a href="../pdf-tools/">PDF Tools</a></li>
+                <li><a href="../resume-tools/">Resume Tools</a></li>
+                <li><a href="../dev-tools/">Developer Tools</a></li>
+                <li><a href="../blog/">Blog</a></li>
+                <li><a href="../pages/about.html">About</a></li>
+                <li><a href="../pages/contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+        </nav>
+    </header>
+
+    <main>
+        <div class="tool-container">
+            <div class="tool-header">
+                <h1>Resume Formatter</h1>
+                <p>Format and structure your resume for maximum ATS readability. Clean formatting for better parsing.
+                </p>
+            </div>
+
+            <div id="formatter-section">
+                <div
+                    style="padding: 1rem; background: #eff6ff; border-left: 4px solid #3b82f6; border-radius: 6px; margin-bottom: 1.5rem;">
+                    <p style="margin: 0; color: #1e40af; font-weight: 500;"><strong>🔒 Privacy Notice:</strong> All
+                        processing happens locally in your browser. Your resume is never uploaded or stored. Your data
+                        remains completely private and secure.</p>
+                </div>
+                <div style="margin-bottom: 2rem;">
+                    <label for="resume-text" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">
+                        Paste your resume text:
+                    </label>
+                    <textarea id="resume-text" rows="15"
+                        style="width: 100%; padding: 1rem; border: 1px solid #e5e7eb; border-radius: 6px; font-family: inherit; font-size: 0.95rem;"
+                        placeholder="Paste your resume content here..."></textarea>
+                    <label for="file-input"
+                        style="display: block; margin-top: 0.5rem; margin-bottom: 0.25rem; font-size: 0.9rem; color: #6b7280;">Or
+                        upload a text file:</label>
+                    <input type="file" id="file-input" accept=".txt" aria-label="Upload resume text file"
+                        style="margin-top: 0.5rem;">
+                    <button class="btn" id="format-btn" style="margin-top: 1rem;"
+                        aria-label="Format resume for ATS compatibility">Format Resume</button>
+                </div>
+
+                <div id="formatted-output" class="hidden">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                        <h3>Formatted Resume</h3>
+                        <button class="btn btn-secondary" id="copy-btn"
+                            aria-label="Copy formatted resume text to clipboard">Copy Formatted Text</button>
+                    </div>
+                    <div id="formatted-text"
+                        style="padding: 1.5rem; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 6px; white-space: pre-wrap; font-family: 'Courier New', monospace; font-size: 0.9rem; max-height: 600px; overflow-y: auto;">
+                    </div>
+                    <div style="margin-top: 1rem;">
+                        <button class="btn btn-success" id="download-btn"
+                            aria-label="Download formatted resume as text file">Download as Text File</button>
+                    </div>
+                </div>
+            </div>
+
+            <section class="content-section">
+                <h2>How Resume Formatting Works</h2>
+                <p>Our resume formatter cleans and structures your resume text to be more ATS-friendly by applying
+                    intelligent formatting rules that improve how Applicant Tracking Systems parse and understand your
+                    resume content. The formatter analyzes your resume structure and applies optimizations that enhance
+                    readability for both ATS systems and human recruiters.</p>
+
+                <p>The formatting process works by:</p>
+                <ul>
+                    <li><strong>Standardizing Sections:</strong> Ensures consistent section headers (Experience,
+                        Education, Skills, Certifications) using standard capitalization and formatting that ATS systems
+                        easily recognize</li>
+                    <li><strong>Removing Formatting Issues:</strong> Cleans up special characters, unusual symbols, and
+                        formatting elements that ATS systems struggle with, such as decorative bullets, non-standard
+                        dashes, or complex formatting codes</li>
+                    <li><strong>Improving Structure:</strong> Organizes content in a logical, parseable format with
+                        clear hierarchy and consistent indentation that helps ATS systems categorize information
+                        correctly</li>
+                    <li><strong>Adding Proper Spacing:</strong> Ensures consistent spacing and line breaks throughout
+                        the document, eliminating excessive whitespace while maintaining readability</li>
+                    <li><strong>Normalizing Text:</strong> Fixes common formatting inconsistencies like mixed date
+                        formats, inconsistent capitalization, and irregular spacing that can confuse ATS parsing</li>
+                    <li><strong>Optimizing Contact Information:</strong> Formats contact details (phone, email, address)
+                        in a standard, parseable format that ATS systems can extract reliably</li>
+                </ul>
+
+                <h3>Who Should Use Resume Formatting?</h3>
+                <p>Resume formatting is essential for anyone applying to jobs through online systems. Job seekers who
+                    have copied resumes from Word documents with complex formatting will benefit from cleaning and
+                    standardizing their text. Career changers transitioning between industries can ensure their resumes
+                    meet ATS requirements. Professionals updating resumes created years ago can modernize formatting for
+                    current ATS systems. Anyone who has received formatting errors or parsing issues with their resume
+                    should use this tool to create a clean, ATS-friendly version.</p>
+
+                <h3>ATS-Friendly Formatting Guidelines</h3>
+                <p>To maximize ATS compatibility, your resume should follow these formatting principles:</p>
+                <ul>
+                    <li><strong>Use Standard Headers:</strong> Section names like "Experience", "Education", "Skills",
+                        "Certifications" are easily recognized by ATS systems. Avoid creative or non-standard section
+                        names</li>
+                    <li><strong>Avoid Complex Layouts:</strong> Simple, linear formatting works best for ATS. Use a
+                        single-column layout with clear section breaks</li>
+                    <li><strong>Use Consistent Dates:</strong> Format dates consistently throughout (MM/YYYY or Month
+                        YYYY). Avoid mixing formats or using ambiguous date representations</li>
+                    <li><strong>Ensure Plain Text Readability:</strong> Your resume should read well when converted to
+                        plain text, as many ATS systems strip formatting during initial parsing</li>
+                    <li><strong>Avoid Tables or Graphics:</strong> ATS systems struggle with complex layouts, tables,
+                        charts, or graphics. Use simple text-based formatting instead</li>
+                    <li><strong>Use Standard Fonts:</strong> Stick to common fonts (Arial, Calibri, Times New Roman)
+                        that ATS systems can reliably parse</li>
+                    <li><strong>Minimize Special Characters:</strong> Avoid decorative elements, symbols, or special
+                        characters that may not parse correctly</li>
+                </ul>
+
+                <h3>What Gets Formatted in Your Resume</h3>
+                <p>The formatter applies comprehensive formatting improvements across your entire resume:</p>
+                <ul>
+                    <li><strong>Section Headers:</strong> Standardized and capitalized consistently (e.g., "EXPERIENCE",
+                        "EDUCATION", "SKILLS")</li>
+                    <li><strong>Whitespace Management:</strong> Extra whitespace and line breaks are normalized to
+                        consistent spacing</li>
+                    <li><strong>Special Character Cleaning:</strong> Special characters that cause parsing issues are
+                        removed or replaced with standard equivalents</li>
+                    <li><strong>Bullet Point Standardization:</strong> Bullet points are standardized to a consistent
+                        format throughout the document</li>
+                    <li><strong>Contact Information Formatting:</strong> Phone numbers, email addresses, and physical
+                        addresses are formatted in standard, parseable formats</li>
+                    <li><strong>Date Normalization:</strong> Dates are normalized to consistent format (e.g., "01/2020"
+                        or "January 2020")</li>
+                    <li><strong>Text Consistency:</strong> Inconsistent capitalization, spacing, and formatting are
+                        corrected for professional appearance</li>
+                    <li><strong>Structure Optimization:</strong> Content is organized with proper hierarchy and clear
+                        section breaks</li>
+                </ul>
+            </section>
+
+            <section class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <div class="faq-question">Will formatting change my resume content?</div>
+                    <div class="faq-answer">No, the formatter only adjusts formatting and structure. Your content
+                        remains the same, just organized better for ATS systems.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Can I use the formatted resume in Word or PDF?</div>
+                    <div class="faq-answer">Yes, you can copy the formatted text and paste it into Word or any text
+                        editor, then save as PDF. The formatting will be ATS-friendly.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Does formatting guarantee ATS compatibility?</div>
+                    <div class="faq-answer">Formatting helps, but ATS compatibility also depends on keywords, content
+                        quality, and matching the job description. Use this tool along with keyword optimization.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Is my resume data stored?</div>
+                    <div class="faq-answer">No, all formatting happens in your browser. Your resume never leaves your
+                        device.</div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Tools</h3>
+                <ul>
+                    <li><a href="../pdf-tools/">PDF Tools</a></li>
+                    <li><a href="../resume-tools/">Resume Tools</a></li>
+                    <li><a href="../dev-tools/">Developer Tools</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="../blog/">Blog</a></li>
+                    <li><a href="../pages/about.html">About Us</a></li>
+                    <li><a href="../pages/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="../pages/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="../pages/terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Utility Tools. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/resume-formatter.js"></script>
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Resume Formatter",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Format and structure your resume for maximum ATS readability. Clean formatting for better parsing."
+    }
+    </script>
+</body>
+
+</html>

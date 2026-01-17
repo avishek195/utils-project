@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Decode and inspect JWT tokens online. View header, payload, and signature information. Free JWT decoder tool.">
+    <meta name="keywords" content="jwt decoder, jwt token decoder, jwt parser, decode jwt, jwt inspector">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="JWT Decoder - Decode & Inspect JWT Tokens Online">
+    <meta property="og:description"
+        content="Decode and inspect JWT tokens. View header, payload, and signature information instantly.">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="JWT Decoder Online">
+
+    <title>JWT Decoder Free - Decode & Inspect JWT Tokens Online | Privacy-First</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="canonical" href="https://utilitytools.com/dev-tools/jwt-decoder.html">
+    <style>
+        .jwt-section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: #f9fafb;
+            border-radius: 6px;
+        }
+
+        .jwt-section h3 {
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+
+        .jwt-data {
+            background: #1f2937;
+            color: #f9fafb;
+            padding: 1rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+
+        .jwt-info {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: #eff6ff;
+            border-left: 4px solid #3b82f6;
+            border-radius: 4px;
+        }
+
+        .jwt-info strong {
+            color: #1e40af;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="../" class="logo">Utility Tools</a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../">Home</a></li>
+                <li><a href="../pdf-tools/">PDF Tools</a></li>
+                <li><a href="../resume-tools/">Resume Tools</a></li>
+                <li><a href="../dev-tools/">Developer Tools</a></li>
+                <li><a href="../blog/">Blog</a></li>
+                <li><a href="../pages/about.html">About</a></li>
+                <li><a href="../pages/contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+        </nav>
+    </header>
+
+    <main>
+        <div class="tool-container">
+            <div class="tool-header">
+                <h1>JWT Decoder</h1>
+                <p>Decode and inspect JWT tokens. View header, payload, and signature information.</p>
+            </div>
+
+            <div id="decoder-section">
+                <div style="margin-bottom: 2rem;">
+                    <label for="jwt-input" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">
+                        Paste your JWT token:
+                    </label>
+                    <textarea id="jwt-input" rows="3"
+                        style="width: 100%; padding: 1rem; border: 1px solid #e5e7eb; border-radius: 6px; font-family: 'Courier New', monospace; font-size: 0.9rem;"
+                        placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"></textarea>
+                    <button class="btn" id="decode-btn" style="margin-top: 1rem;" aria-label="Decode JWT token">Decode
+                        JWT</button>
+                    <button class="btn btn-secondary" id="clear-btn" style="margin-left: 0.5rem;"
+                        aria-label="Clear JWT input">Clear</button>
+                </div>
+
+                <div id="decoded-output" class="hidden">
+                    <div class="jwt-section">
+                        <h3>Header</h3>
+                        <div id="header-output" class="jwt-data"></div>
+                        <div id="header-info" class="jwt-info"></div>
+                    </div>
+
+                    <div class="jwt-section">
+                        <h3>Payload</h3>
+                        <div id="payload-output" class="jwt-data"></div>
+                        <div id="payload-info" class="jwt-info"></div>
+                    </div>
+
+                    <div class="jwt-section">
+                        <h3>Signature</h3>
+                        <div id="signature-output" class="jwt-data"></div>
+                        <div id="signature-info" class="jwt-info"></div>
+                    </div>
+                </div>
+
+                <div id="error-message" class="hidden"></div>
+            </div>
+
+            <section class="content-section">
+                <h2>How JWT Decoding Works</h2>
+                <p>A JWT (JSON Web Token) is a compact, URL-safe token format used for securely transmitting information
+                    between parties. JWTs are commonly used for authentication and authorization in modern web
+                    applications, APIs, and microservices architectures. Understanding JWT structure is essential for
+                    developers working with authentication systems.</p>
+
+                <p>A JWT consists of three parts separated by dots (.), each encoded in Base64:</p>
+                <ul>
+                    <li><strong>Header:</strong> Contains metadata about the token, including the token type (JWT) and
+                        the signing algorithm used (such as HS256, RS256, or ES256). The header tells the recipient how
+                        to process and verify the token.</li>
+                    <li><strong>Payload:</strong> Contains the claims, which are statements about an entity (typically
+                        the user) and additional metadata. Claims can be registered (standard claims like expiration),
+                        public (defined in the JWT registry), or private (custom claims specific to your application).
+                    </li>
+                    <li><strong>Signature:</strong> Used to verify that the token hasn't been tampered with and to
+                        confirm the sender's identity. The signature is created by combining the encoded header, encoded
+                        payload, a secret (for HMAC algorithms) or private key (for RSA/ECDSA), and the algorithm
+                        specified in the header.</li>
+                </ul>
+                <p>Our decoder extracts and displays each part in a human-readable format, making it easy to inspect
+                    token contents without manual Base64 decoding. The tool parses the JSON in each section and presents
+                    it with syntax highlighting for clarity. All decoding happens entirely in your browser, ensuring
+                    your tokens remain private and secure.</p>
+
+                <h3>Who Should Use JWT Decoding?</h3>
+                <p>JWT decoding is essential for developers, security professionals, and anyone working with
+                    authentication systems. Backend developers need to inspect JWT tokens during API development and
+                    debugging. Frontend developers working with authentication flows benefit from understanding token
+                    structure and claims. Security professionals analyze tokens to verify proper implementation and
+                    identify potential vulnerabilities. DevOps engineers troubleshoot authentication issues in
+                    production environments. Students learning web security and authentication mechanisms can explore
+                    real JWT examples. Anyone implementing or maintaining JWT-based authentication will find this tool
+                    invaluable for development and debugging.</p>
+
+                <h3>Common JWT Claims Explained</h3>
+                <p>JWT claims provide information about the token and its subject. Understanding these claims helps you
+                    work effectively with JWT tokens:</p>
+                <ul>
+                    <li><strong>iss (issuer):</strong> Identifies who issued the token. This is typically the
+                        authentication server or service that created the token. Useful for verifying token origin.</li>
+                    <li><strong>sub (subject):</strong> The subject of the token, usually a unique identifier for the
+                        user (user ID, email, or username). This is the primary identifier for the authenticated entity.
+                    </li>
+                    <li><strong>aud (audience):</strong> Identifies who the token is intended for. This could be a
+                        specific API, service, or application. Tokens should only be accepted by their intended
+                        audience.</li>
+                    <li><strong>exp (expiration):</strong> Token expiration timestamp (Unix timestamp). The token is
+                        invalid after this time. Applications should reject expired tokens.</li>
+                    <li><strong>iat (issued at):</strong> Timestamp indicating when the token was issued. Useful for
+                        determining token age and implementing token refresh strategies.</li>
+                    <li><strong>nbf (not before):</strong> Timestamp indicating when the token becomes valid. Tokens
+                        with nbf claims should not be accepted before this time.</li>
+                    <li><strong>jti (JWT ID):</strong> Unique identifier for the token. Useful for token revocation and
+                        preventing token reuse.</li>
+                    <li><strong>Custom Claims:</strong> Applications often include custom claims like user roles,
+                        permissions, or application-specific data. These vary by implementation.</li>
+                </ul>
+
+                <h3>Common Use Cases</h3>
+                <ul>
+                    <li><strong>Debugging Authentication:</strong> Debug authentication issues by inspecting token
+                        contents, verifying claims, and checking expiration times. Identify why authentication might be
+                        failing.</li>
+                    <li><strong>Development and Testing:</strong> Inspect token contents during development to verify
+                        that your application is creating tokens with the correct claims and structure.</li>
+                    <li><strong>Token Verification:</strong> Verify token structure and claims before implementing
+                        authentication logic. Ensure tokens contain expected data.</li>
+                    <li><strong>Expiration Management:</strong> Check token expiration times to implement proper token
+                        refresh strategies and handle expired tokens gracefully.</li>
+                    <li><strong>Learning and Education:</strong> Understand JWT structure by examining real tokens.
+                        Learn how different claims are used in practice.</li>
+                    <li><strong>Security Auditing:</strong> Analyze tokens to verify proper security implementation,
+                        check for sensitive data exposure, and ensure best practices are followed.</li>
+                    <li><strong>API Integration:</strong> Understand token structure when integrating with third-party
+                        APIs that use JWT authentication.</li>
+                </ul>
+
+                <h3>Security Considerations</h3>
+                <p><strong>Important Security Notes:</strong></p>
+                <ul>
+                    <li><strong>Never Share Tokens Publicly:</strong> JWT tokens are sensitive credentials. Never share
+                        them publicly, commit them to version control, or expose them in screenshots or documentation.
+                    </li>
+                    <li><strong>Token Ownership:</strong> Only decode tokens you own or have explicit permission to
+                        inspect. Decoding someone else's token without permission is unethical and potentially illegal.
+                    </li>
+                    <li><strong>Signature Verification:</strong> This tool decodes tokens but does not verify
+                        signatures. Signature verification requires the secret key or public key, which should never be
+                        shared. Always verify signatures in your application code.</li>
+                    <li><strong>Sensitive Data:</strong> Be aware that JWT payloads are Base64-encoded, not encrypted.
+                        Anyone who can decode the token can read the payload. Never store sensitive information like
+                        passwords in JWT tokens.</li>
+                    <li><strong>Token Storage:</strong> Store tokens securely in your application. Use httpOnly cookies
+                        for web applications or secure storage mechanisms for mobile apps.</li>
+                </ul>
+            </section>
+
+            <section class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <div class="faq-question">What is a JWT token?</div>
+                    <div class="faq-answer">JWT (JSON Web Token) is a compact, URL-safe token format used for securely
+                        transmitting information between parties. It's commonly used for authentication and
+                        authorization.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Can I verify the signature?</div>
+                    <div class="faq-answer">This tool decodes the token but doesn't verify signatures. Signature
+                        verification requires the secret key, which should never be shared publicly.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Is my token data stored?</div>
+                    <div class="faq-answer">No, all decoding happens in your browser. Your token never leaves your
+                        device, ensuring complete privacy.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">What if the token is expired?</div>
+                    <div class="faq-answer">The decoder will still decode the token and show its contents, including the
+                        expiration time. You can check the 'exp' claim to see when it expired.</div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Tools</h3>
+                <ul>
+                    <li><a href="../pdf-tools/">PDF Tools</a></li>
+                    <li><a href="../resume-tools/">Resume Tools</a></li>
+                    <li><a href="../dev-tools/">Developer Tools</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="../blog/">Blog</a></li>
+                    <li><a href="../pages/about.html">About Us</a></li>
+                    <li><a href="../pages/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="../pages/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="../pages/terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Utility Tools. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/jwt-decoder.js"></script>
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "JWT Decoder",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Decode and inspect JWT tokens online. View header, payload, and signature information."
+    }
+    </script>
+</body>
+
+</html>

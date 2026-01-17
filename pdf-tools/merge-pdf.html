@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Merge multiple PDF files into one document online - free, fast, and completely private. All processing happens in your browser. Your files never leave your device. Combine up to 10 PDFs instantly.">
+    <meta name="keywords" content="merge pdf, combine pdf, join pdf, pdf merger, merge pdf files">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Merge PDF Files Online - Combine Multiple PDFs Free">
+    <meta property="og:description"
+        content="Merge multiple PDF files into one document instantly. No uploads, completely private.">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Merge PDF Files Online">
+
+    <title>Merge PDF Files Online Free - Combine Multiple PDFs | Privacy-First</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="canonical" href="https://utilitytools.com/pdf-tools/merge-pdf.html">
+
+    <!-- PDF Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="../" class="logo">Utility Tools</a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../">Home</a></li>
+                <li><a href="../pdf-tools/">PDF Tools</a></li>
+                <li><a href="../resume-tools/">Resume Tools</a></li>
+                <li><a href="../dev-tools/">Developer Tools</a></li>
+                <li><a href="../blog/">Blog</a></li>
+                <li><a href="../pages/about.html">About</a></li>
+                <li><a href="../pages/contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+        </nav>
+    </header>
+
+    <main>
+        <div class="tool-container">
+            <div class="tool-header">
+                <h1>Merge PDF Files</h1>
+                <p>Combine multiple PDF files into one document. Simple drag and drop interface.</p>
+            </div>
+
+            <div id="upload-section">
+                <div
+                    style="padding: 1rem; background: #eff6ff; border-left: 4px solid #3b82f6; border-radius: 6px; margin-bottom: 1.5rem;">
+                    <p style="margin: 0; color: #1e40af; font-weight: 500;"><strong>🔒 Privacy Notice:</strong> All
+                        processing happens locally in your browser. Files are never uploaded or stored. Your PDFs remain
+                        completely private and secure.</p>
+                </div>
+                <div class="upload-area" id="upload-area">
+                    <div class="upload-icon">📄</div>
+                    <h3>Drop PDF files here or click to browse</h3>
+                    <p>Select multiple files (Maximum: 10 files, 50MB each)</p>
+                    <label for="file-input" class="sr-only">Select PDF files to merge</label>
+                    <input type="file" id="file-input" accept=".pdf" multiple aria-label="Select PDF files to merge"
+                        style="display: none;">
+                </div>
+
+                <div id="file-list" style="margin-top: 1rem;"></div>
+
+                <div style="text-align: center; margin-top: 2rem;">
+                    <button class="btn" id="merge-btn" disabled aria-label="Merge selected PDF files">Merge
+                        PDFs</button>
+                    <button class="btn btn-secondary hidden" id="download-btn" style="margin-left: 1rem;"
+                        aria-label="Download merged PDF file">Download Merged PDF</button>
+                </div>
+            </div>
+
+            <section class="content-section">
+                <h2>How PDF Merging Works</h2>
+                <p>Our PDF merge tool combines multiple PDF files into a single, unified document while preserving the
+                    original formatting, fonts, images, and layout of each source file. The merge process uses advanced
+                    PDF manipulation libraries that work entirely within your web browser, ensuring your documents
+                    remain private and secure throughout the operation.</p>
+
+                <p>The tool intelligently handles the merging process by:</p>
+                <ul>
+                    <li><strong>Preserving Quality:</strong> Maintains original PDF quality and formatting from each
+                        source file. Text remains crisp, images stay sharp, and fonts are properly embedded.</li>
+                    <li><strong>Maintaining Order:</strong> Combines files in the exact order you select, allowing you
+                        to control the sequence of pages in the final document.</li>
+                    <li><strong>Fast Processing:</strong> Merges files instantly in your browser without uploading to
+                        external servers. Processing speed depends on file sizes and your device's capabilities.</li>
+                    <li><strong>Secure Processing:</strong> All processing happens locally using client-side JavaScript.
+                        Your files never leave your device, ensuring complete privacy for sensitive documents.</li>
+                    <li><strong>Format Preservation:</strong> Maintains page sizes, margins, and layout from each source
+                        PDF, creating a seamless combined document.</li>
+                </ul>
+
+                <h3>Who Should Use PDF Merging?</h3>
+                <p>PDF merging is essential for professionals, students, and anyone who regularly works with multiple
+                    documents. Business professionals often need to combine reports, proposals, and supporting documents
+                    into single files for easier sharing and archiving. Students merge assignment components, research
+                    papers, and appendices. Administrative staff combine invoices, receipts, and forms for
+                    record-keeping. Authors and publishers merge book chapters into complete manuscripts. Legal
+                    professionals combine contracts, exhibits, and documentation. Anyone who needs to organize multiple
+                    PDFs into a single, cohesive document will find this tool invaluable.</p>
+
+                <h3>Common Use Cases</h3>
+                <ul>
+                    <li><strong>Document Compilation:</strong> Combine multiple documents into one comprehensive report
+                        or presentation</li>
+                    <li><strong>Scanned Document Organization:</strong> Merge scanned pages into a single PDF for easier
+                        management and sharing</li>
+                    <li><strong>Financial Record Keeping:</strong> Combine invoices, receipts, and financial statements
+                        into organized monthly or yearly files</li>
+                    <li><strong>Academic Work:</strong> Merge chapters, appendices, and references into complete
+                        research papers or theses</li>
+                    <li><strong>Form Completion:</strong> Combine forms and supporting documents for applications or
+                        submissions</li>
+                    <li><strong>Portfolio Creation:</strong> Merge multiple portfolio pieces into a single showcase
+                        document</li>
+                    <li><strong>Archive Management:</strong> Organize related documents into consolidated archive files
+                    </li>
+                </ul>
+
+                <h3>Tips for Best Results</h3>
+                <ul>
+                    <li>Select files in the order you want them merged - you can typically reorder them before merging
+                    </li>
+                    <li>Ensure all files are unlocked (no passwords) as password-protected PDFs cannot be processed</li>
+                    <li>Check file sizes before merging (max 50MB per file, up to 10 files total) to ensure smooth
+                        processing</li>
+                    <li>Use consistent page sizes when possible for a more professional-looking final document</li>
+                    <li>Review the file list before merging to confirm the correct order and files are selected</li>
+                    <li>For very large files, consider compressing them first to improve merge performance</li>
+                </ul>
+            </section>
+
+            <section class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <div class="faq-question">How many PDFs can I merge at once?</div>
+                    <div class="faq-answer">You can merge up to 10 PDF files at once. Each file can be up to 50MB in
+                        size. For larger batches, consider merging in groups.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Can I reorder files before merging?</div>
+                    <div class="faq-answer">Yes, you can reorder files by dragging them in the file list before clicking
+                        the merge button.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Will the merged PDF maintain original formatting?</div>
+                    <div class="faq-answer">Yes, our merge tool preserves all original formatting, fonts, images, and
+                        layout from each PDF file.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Can I merge password-protected PDFs?</div>
+                    <div class="faq-answer">Currently, our tool works with unprotected PDFs. Please remove passwords
+                        before merging.</div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Tools</h3>
+                <ul>
+                    <li><a href="../pdf-tools/">PDF Tools</a></li>
+                    <li><a href="../resume-tools/">Resume Tools</a></li>
+                    <li><a href="../dev-tools/">Developer Tools</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="../blog/">Blog</a></li>
+                    <li><a href="../pages/about.html">About Us</a></li>
+                    <li><a href="../pages/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="../pages/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="../pages/terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Utility Tools. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/pdf-merge.js"></script>
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "PDF Merger",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Merge multiple PDF files into one document online. Free, fast, and secure."
+    }
+    </script>
+</body>
+
+</html>

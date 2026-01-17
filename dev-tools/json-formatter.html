@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Format and validate JSON online - beautify with syntax highlighting, minify for production, and detect errors instantly. All processing happens in your browser. Your data never leaves your device.">
+    <meta name="keywords" content="json formatter, json validator, json beautifier, json minify, json parser">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="JSON Formatter - Format & Validate JSON Online">
+    <meta property="og:description"
+        content="Format, validate, and beautify JSON data. Syntax highlighting and error detection included.">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="JSON Formatter Online">
+
+    <title>JSON Formatter Free - Format & Validate JSON Online | Privacy-First</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="canonical" href="https://utilitytools.com/dev-tools/json-formatter.html">
+    <style>
+        .json-editor {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .json-editor {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .json-input,
+        .json-output {
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            padding: 1rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            min-height: 400px;
+            background: #f9fafb;
+        }
+
+        .json-output {
+            background: #1f2937;
+            color: #f9fafb;
+            overflow-x: auto;
+        }
+
+        .json-key {
+            color: #60a5fa;
+        }
+
+        .json-string {
+            color: #34d399;
+        }
+
+        .json-number {
+            color: #fbbf24;
+        }
+
+        .json-boolean {
+            color: #f472b6;
+        }
+
+        .json-null {
+            color: #a78bfa;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="../" class="logo">Utility Tools</a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../">Home</a></li>
+                <li><a href="../pdf-tools/">PDF Tools</a></li>
+                <li><a href="../resume-tools/">Resume Tools</a></li>
+                <li><a href="../dev-tools/">Developer Tools</a></li>
+                <li><a href="../blog/">Blog</a></li>
+                <li><a href="../pages/about.html">About</a></li>
+                <li><a href="../pages/contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+        </nav>
+    </header>
+
+    <main>
+        <div class="tool-container">
+            <div class="tool-header">
+                <h1>JSON Formatter</h1>
+                <p>Format and validate JSON data. Beautify JSON with syntax highlighting and error detection.</p>
+            </div>
+
+            <div id="formatter-section">
+                <div style="margin-bottom: 1rem;">
+                    <button class="btn" id="format-btn" aria-label="Format JSON with proper indentation">Format
+                        JSON</button>
+                    <button class="btn btn-secondary" id="minify-btn" style="margin-left: 0.5rem;"
+                        aria-label="Minify JSON by removing whitespace">Minify JSON</button>
+                    <button class="btn btn-secondary" id="validate-btn" style="margin-left: 0.5rem;"
+                        aria-label="Validate JSON syntax">Validate</button>
+                    <button class="btn btn-secondary" id="copy-btn" style="margin-left: 0.5rem;"
+                        aria-label="Copy formatted JSON to clipboard">Copy Output</button>
+                </div>
+
+                <div class="json-editor">
+                    <div>
+                        <label for="json-input" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Input
+                            JSON:</label>
+                        <textarea id="json-input" class="json-input"
+                            placeholder='Paste your JSON here...&#10;Example: {"name": "John", "age": 30}'></textarea>
+                    </div>
+                    <div>
+                        <label for="json-output"
+                            style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Formatted Output:</label>
+                        <pre id="json-output" class="json-output"></pre>
+                    </div>
+                </div>
+
+                <div id="error-message" class="hidden"></div>
+            </div>
+
+            <section class="content-section">
+                <h2>How JSON Formatting Works</h2>
+                <p>Our JSON formatter parses your JSON input using advanced parsing algorithms and formats it with
+                    proper indentation, line breaks, and syntax highlighting. The tool performs comprehensive validation
+                    to ensure your JSON is syntactically correct and provides detailed error messages when issues are
+                    detected. All processing happens entirely in your browser, ensuring your data remains private and
+                    secure.</p>
+
+                <p>The formatter uses a multi-step process:</p>
+                <ul>
+                    <li><strong>Parsing:</strong> Analyzes your JSON input to understand its structure and identify any
+                        syntax errors</li>
+                    <li><strong>Validation:</strong> Checks for common JSON errors like missing commas, unclosed
+                        brackets, or invalid characters</li>
+                    <li><strong>Formatting:</strong> Applies consistent indentation (typically 2 or 4 spaces) and line
+                        breaks to improve readability</li>
+                    <li><strong>Syntax Highlighting:</strong> Color-codes different JSON elements (keys, strings,
+                        numbers, booleans) for visual clarity</li>
+                    <li><strong>Error Reporting:</strong> Provides specific error messages with line numbers when JSON
+                        is invalid</li>
+                </ul>
+
+                <h3>Who Should Use JSON Formatting?</h3>
+                <p>JSON formatting is essential for developers, API integrators, and anyone working with JSON data. Web
+                    developers frequently need to format API responses for debugging and documentation. Backend
+                    developers validate JSON before sending it to frontend applications. Mobile app developers format
+                    JSON configuration files for easier editing. Data analysts work with JSON datasets and need readable
+                    formats for analysis. Students learning web development benefit from seeing properly formatted JSON
+                    examples. Anyone who works with APIs, configuration files, or data exchange will find this tool
+                    invaluable.</p>
+
+                <h3>Key Features Explained</h3>
+                <ul>
+                    <li><strong>Format JSON:</strong> Beautify JSON with proper indentation and spacing. Transforms
+                        compact, hard-to-read JSON into a well-structured, human-readable format. Makes debugging and
+                        code review much easier.</li>
+                    <li><strong>Minify JSON:</strong> Remove all whitespace to reduce file size. Essential for
+                        production environments where smaller file sizes improve performance. Reduces bandwidth usage
+                        and speeds up data transfer.</li>
+                    <li><strong>Validate JSON:</strong> Check for syntax errors and provide detailed error messages with
+                        specific line numbers and descriptions. Helps identify and fix issues before they cause problems
+                        in your application.</li>
+                    <li><strong>Syntax Highlighting:</strong> Color-coded output distinguishes between keys, strings,
+                        numbers, booleans, and null values. Makes complex JSON structures easier to understand at a
+                        glance.</li>
+                    <li><strong>Copy to Clipboard:</strong> Easily copy formatted JSON for use in other applications,
+                        documentation, or code. Saves time compared to manual copying and formatting.</li>
+                </ul>
+
+                <h3>Common Use Cases</h3>
+                <ul>
+                    <li><strong>API Development:</strong> Format API responses for debugging, testing, and
+                        documentation. Makes it easier to understand API data structures and identify issues.</li>
+                    <li><strong>Data Validation:</strong> Validate JSON before sending to APIs or storing in databases.
+                        Prevents errors and ensures data integrity.</li>
+                    <li><strong>Production Optimization:</strong> Minify JSON for production use to reduce file sizes
+                        and improve application performance.</li>
+                    <li><strong>Configuration Management:</strong> Pretty-print JSON configuration files for easier
+                        editing and maintenance. Makes complex configurations more manageable.</li>
+                    <li><strong>Learning and Education:</strong> Learn JSON structure and formatting by seeing properly
+                        formatted examples. Helps understand JSON syntax and best practices.</li>
+                    <li><strong>Code Review:</strong> Format JSON in code reviews to make it easier for team members to
+                        understand and review data structures.</li>
+                    <li><strong>Documentation:</strong> Create readable JSON examples for API documentation, tutorials,
+                        and technical writing.</li>
+                </ul>
+
+                <h3>JSON Best Practices</h3>
+                <p>Following JSON best practices ensures compatibility, readability, and maintainability:</p>
+                <ul>
+                    <li><strong>Use Double Quotes:</strong> Always use double quotes for strings. Single quotes are not
+                        valid in JSON and will cause parsing errors.</li>
+                    <li><strong>Proper Comma Placement:</strong> Ensure commas are placed correctly between elements.
+                        Trailing commas are not allowed in JSON.</li>
+                    <li><strong>Validate Before Production:</strong> Always validate JSON before using in production to
+                        prevent runtime errors and data corruption.</li>
+                    <li><strong>Consistent Indentation:</strong> Use consistent indentation (2 or 4 spaces) for
+                        readability. While not required, it makes JSON much easier to work with.</li>
+                    <li><strong>Handle Null Values:</strong> Use null (not "null" as a string) for empty or missing
+                        values. Understand the difference between null, undefined, and empty strings.</li>
+                    <li><strong>Escape Special Characters:</strong> Properly escape special characters in strings
+                        (quotes, backslashes, newlines) to prevent parsing errors.</li>
+                    <li><strong>Validate Data Types:</strong> Ensure numbers, booleans, and null values are not quoted
+                        (they should be literal values, not strings).</li>
+                </ul>
+            </section>
+
+            <section class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <div class="faq-question">What is JSON?</div>
+                    <div class="faq-answer">JSON (JavaScript Object Notation) is a lightweight data interchange format.
+                        It's easy for humans to read and write, and easy for machines to parse and generate.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Can I format invalid JSON?</div>
+                    <div class="faq-answer">No, the formatter will display an error message if your JSON is invalid. Fix
+                        the errors first, then format again.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">What's the difference between format and minify?</div>
+                    <div class="faq-answer">Format adds indentation and line breaks for readability. Minify removes all
+                        whitespace to create the smallest possible file size.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Is there a file size limit?</div>
+                    <div class="faq-answer">The tool can handle JSON up to 10MB. For larger files, consider using
+                        desktop applications.</div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Tools</h3>
+                <ul>
+                    <li><a href="../pdf-tools/">PDF Tools</a></li>
+                    <li><a href="../resume-tools/">Resume Tools</a></li>
+                    <li><a href="../dev-tools/">Developer Tools</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="../blog/">Blog</a></li>
+                    <li><a href="../pages/about.html">About Us</a></li>
+                    <li><a href="../pages/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="../pages/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="../pages/terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Utility Tools. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/json-formatter.js"></script>
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "JSON Formatter",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Format and validate JSON online. Beautify JSON with syntax highlighting and error detection."
+    }
+    </script>
+</body>
+
+</html>

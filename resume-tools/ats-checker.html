@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Free ATS keyword checker for resumes - analyze ATS compatibility, keyword density, and get optimization suggestions. All processing happens in your browser. Your resume never leaves your device.">
+    <meta name="keywords"
+        content="ats checker, resume keywords, ats resume checker, keyword analyzer, resume optimizer">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="ATS Keyword Checker - Analyze Your Resume for ATS Compatibility">
+    <meta property="og:description"
+        content="Check your resume for ATS keywords and get optimization suggestions. Free, instant analysis.">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="ATS Keyword Checker">
+
+    <title>ATS Keyword Checker Free - Analyze Resume ATS Compatibility | Privacy-First</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="canonical" href="https://utilitytools.com/resume-tools/ats-checker.html">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="../" class="logo">Utility Tools</a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../">Home</a></li>
+                <li><a href="../pdf-tools/">PDF Tools</a></li>
+                <li><a href="../resume-tools/">Resume Tools</a></li>
+                <li><a href="../dev-tools/">Developer Tools</a></li>
+                <li><a href="../blog/">Blog</a></li>
+                <li><a href="../pages/about.html">About</a></li>
+                <li><a href="../pages/contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+        </nav>
+    </header>
+
+    <main>
+        <div class="tool-container">
+            <div class="tool-header">
+                <h1>ATS Keyword Checker</h1>
+                <p>Analyze your resume for ATS compatibility. Check keyword density and get optimization suggestions.
+                </p>
+            </div>
+
+            <div id="checker-section">
+                <div
+                    style="padding: 1rem; background: #eff6ff; border-left: 4px solid #3b82f6; border-radius: 6px; margin-bottom: 1.5rem;">
+                    <p style="margin: 0; color: #1e40af; font-weight: 500;"><strong>🔒 Privacy Notice:</strong> All
+                        processing happens locally in your browser. Your resume is never uploaded or stored. Your data
+                        remains completely private and secure.</p>
+                </div>
+                <div style="margin-bottom: 2rem;">
+                    <label for="resume-text" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">
+                        Paste your resume text or upload a text file:
+                    </label>
+                    <textarea id="resume-text" rows="15"
+                        style="width: 100%; padding: 1rem; border: 1px solid #e5e7eb; border-radius: 6px; font-family: inherit; font-size: 0.95rem;"
+                        placeholder="Paste your resume content here..."></textarea>
+                    <label for="file-input"
+                        style="display: block; margin-top: 0.5rem; margin-bottom: 0.25rem; font-size: 0.9rem; color: #6b7280;">Or
+                        upload a file:</label>
+                    <input type="file" id="file-input" accept=".txt,.doc,.docx" aria-label="Upload resume file"
+                        style="margin-top: 0.5rem;">
+                    <button class="btn" id="analyze-btn" style="margin-top: 1rem;"
+                        aria-label="Analyze resume for ATS compatibility">Analyze Resume</button>
+                </div>
+
+                <div id="results" class="hidden">
+                    <div
+                        style="padding: 1rem; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 6px; margin-bottom: 1.5rem;">
+                        <p style="margin: 0; color: #0c4a6e; font-size: 0.95rem;"><strong>Note:</strong> This tool
+                            provides guidance based on keyword and structure analysis. It does not guarantee interviews
+                            or job selection.</p>
+                    </div>
+                    <div id="score-section"
+                        style="padding: 2rem; background: #f3f4f6; border-radius: 8px; margin-bottom: 2rem; text-align: center;">
+                        <h2 style="margin-bottom: 1rem;">ATS Compatibility Score</h2>
+                        <div id="score-display"
+                            style="font-size: 3rem; font-weight: 700; color: #3b82f6; margin-bottom: 0.5rem;">-</div>
+                        <div id="score-label" style="color: #6b7280;"></div>
+                    </div>
+
+                    <div id="keyword-analysis" style="margin-bottom: 2rem;">
+                        <h3 style="margin-bottom: 1rem;">Keyword Analysis</h3>
+                        <div id="keywords-found" style="padding: 1rem; background: #f9fafb; border-radius: 6px;"></div>
+                    </div>
+
+                    <div id="suggestions" style="margin-bottom: 2rem;">
+                        <h3 style="margin-bottom: 1rem;">Optimization Suggestions</h3>
+                        <div id="suggestions-list"></div>
+                    </div>
+
+                    <div id="stats" style="padding: 1rem; background: #f9fafb; border-radius: 6px;">
+                        <h3 style="margin-bottom: 1rem;">Resume Statistics</h3>
+                        <div id="stats-content"></div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="content-section">
+                <h2>How ATS Keyword Checking Works</h2>
+                <p>Our ATS keyword checker analyzes your resume text using advanced algorithms that evaluate multiple
+                    factors affecting how Applicant Tracking Systems parse and score your resume. The tool examines your
+                    resume content comprehensively to identify strengths and areas for improvement.</p>
+
+                <p>The checker evaluates your resume for:</p>
+                <ul>
+                    <li><strong>Keyword Density:</strong> Frequency of important industry keywords and their
+                        distribution throughout your resume. Optimal keyword density helps ATS systems identify relevant
+                        candidates.</li>
+                    <li><strong>ATS-Friendly Terms:</strong> Common terms and phrases that ATS systems recognize and
+                        prioritize. These include technical skills, certifications, and industry-standard terminology.
+                    </li>
+                    <li><strong>Formatting Issues:</strong> Problems that might cause ATS parsing errors, such as
+                        complex layouts, tables, graphics, or non-standard formatting that prevents proper text
+                        extraction.</li>
+                    <li><strong>Content Structure:</strong> Organization and readability for ATS systems.
+                        Well-structured resumes with clear sections are easier for ATS systems to parse and categorize.
+                    </li>
+                    <li><strong>Keyword Placement:</strong> Strategic placement of keywords in headers, job titles, and
+                        throughout the resume content for maximum ATS visibility.</li>
+                </ul>
+
+                <h3>How the ATS Score is Calculated</h3>
+                <p>The ATS compatibility score is calculated based on multiple weighted factors that reflect how ATS
+                    systems typically evaluate resumes. The scoring algorithm considers:</p>
+                <ul>
+                    <li><strong>Keyword Relevance (30%):</strong> Presence of common industry keywords, technical
+                        skills, and job-relevant terminology</li>
+                    <li><strong>Content Quality (25%):</strong> Use of action verbs, quantifiable achievements, and
+                        professional language</li>
+                    <li><strong>Structure and Formatting (20%):</strong> Clear section headers, consistent formatting,
+                        and ATS-friendly layout</li>
+                    <li><strong>Keyword Density (15%):</strong> Appropriate frequency and distribution of keywords
+                        throughout the resume</li>
+                    <li><strong>ATS Compatibility Indicators (10%):</strong> Presence of standard sections, proper date
+                        formats, and absence of problematic elements</li>
+                </ul>
+                <p><strong>Important Note:</strong> This score is an estimate based on common ATS evaluation patterns.
+                    Actual ATS systems use proprietary algorithms that vary by vendor (Taleo, Workday, Greenhouse, etc.)
+                    and employer. The score should be used as guidance to improve your resume, not as a guarantee of ATS
+                    compatibility. Factors like job description matching, industry-specific requirements, and
+                    employer-specific preferences also significantly impact ATS screening results.</p>
+
+                <h3>What Makes a Resume ATS-Friendly?</h3>
+                <p>ATS systems are designed to parse and categorize resume content automatically. To maximize
+                    compatibility, your resume should:</p>
+                <ul>
+                    <li><strong>Include Relevant Keywords:</strong> Incorporate keywords from the job description
+                        naturally throughout your resume, especially in job titles, skills sections, and experience
+                        descriptions</li>
+                    <li><strong>Use Simple Formatting:</strong> Avoid complex layouts, tables, graphics, and
+                        multi-column designs that confuse ATS parsing engines</li>
+                    <li><strong>Employ Standard Sections:</strong> Use clear, standard section headers like
+                        "Experience", "Education", "Skills", "Certifications" that ATS systems easily recognize</li>
+                    <li><strong>Place Keywords Strategically:</strong> Include keywords in multiple locations - headers,
+                        job titles, skills lists, and experience descriptions - for maximum visibility</li>
+                    <li><strong>Choose Appropriate File Format:</strong> Use .docx or .pdf format. Avoid .txt for
+                        formatted resumes, and never use image-based PDFs</li>
+                    <li><strong>Use Standard Fonts:</strong> Stick to common fonts (Arial, Calibri, Times New Roman)
+                        that ATS systems can reliably parse</li>
+                    <li><strong>Avoid Special Characters:</strong> Minimize use of symbols, graphics, or special
+                        characters that may not parse correctly</li>
+                </ul>
+
+                <h3>Who Should Use the ATS Keyword Checker?</h3>
+                <p>This tool is essential for job seekers at all career stages. Recent graduates can ensure their
+                    resumes are optimized for automated screening systems. Career changers can identify gaps in keyword
+                    usage for their target industry. Experienced professionals can verify their resumes meet modern ATS
+                    requirements. Anyone applying to large companies or using online job boards should check their
+                    resume's ATS compatibility, as most employers now use ATS systems to manage applications.</p>
+
+                <h3>Common ATS Keywords by Industry</h3>
+                <p>Different industries value different keywords, and our checker looks for common terms across various
+                    fields. Understanding industry-specific keywords helps you optimize your resume effectively:</p>
+                <ul>
+                    <li><strong>Technical Skills:</strong> Programming languages (Python, Java, JavaScript), software
+                        tools (Salesforce, Tableau), frameworks, and technical certifications</li>
+                    <li><strong>Soft Skills:</strong> Leadership, communication, teamwork, problem-solving, project
+                        management, and collaboration</li>
+                    <li><strong>Industry-Specific Terms:</strong> Professional terminology, methodologies, and standards
+                        relevant to your field</li>
+                    <li><strong>Action Verbs:</strong> Managed, developed, implemented, created, improved, led,
+                        optimized - these demonstrate impact and achievement</li>
+                    <li><strong>Quantifiable Achievements:</strong> Percentages, numbers, metrics, and measurable
+                        results that demonstrate value and impact</li>
+                    <li><strong>Certifications and Credentials:</strong> Professional certifications, licenses, and
+                        credentials that are important in your industry</li>
+                </ul>
+            </section>
+
+            <section class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <div class="faq-question">What is a good ATS score?</div>
+                    <div class="faq-answer">A score above 70% is considered good, while 80%+ is excellent. However, the
+                        score is just one indicator. Focus on incorporating relevant keywords from the job description.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Should I include every keyword from the job description?</div>
+                    <div class="faq-answer">Not necessarily. Focus on keywords that are relevant to your experience and
+                        skills. Keyword stuffing can actually hurt your resume's readability.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How often should I check my resume?</div>
+                    <div class="faq-answer">Check your resume each time you apply for a new position, as different jobs
+                        require different keywords. Tailor your resume for each application.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Is my resume data stored?</div>
+                    <div class="faq-answer">No, all analysis happens in your browser. Your resume never leaves your
+                        device, ensuring complete privacy.</div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Tools</h3>
+                <ul>
+                    <li><a href="../pdf-tools/">PDF Tools</a></li>
+                    <li><a href="../resume-tools/">Resume Tools</a></li>
+                    <li><a href="../dev-tools/">Developer Tools</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="../blog/">Blog</a></li>
+                    <li><a href="../pages/about.html">About Us</a></li>
+                    <li><a href="../pages/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="../pages/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="../pages/terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Utility Tools. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/ats-checker.js"></script>
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "ATS Keyword Checker",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Free ATS keyword checker for resumes. Analyze your resume for ATS compatibility and get optimization suggestions."
+    }
+    </script>
+</body>
+
+</html>

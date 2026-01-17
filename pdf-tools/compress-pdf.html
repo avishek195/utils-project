@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Compress PDF files online for free - reduce file size up to 80% without quality loss. All processing happens in your browser. Your files never leave your device. Fast, secure, and completely private.">
+    <meta name="keywords" content="compress pdf, reduce pdf size, pdf compressor, shrink pdf, pdf optimizer">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Compress PDF Online - Reduce PDF File Size Free">
+    <meta property="og:description"
+        content="Compress PDF files instantly. Reduce file size up to 80% while maintaining quality. No uploads, completely private.">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Compress PDF Online Free">
+
+    <title>Compress PDF Online Free - Reduce File Size 80% | Privacy-First Tool</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="canonical" href="https://utilitytools.com/pdf-tools/compress-pdf.html">
+
+    <!-- PDF Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="../" class="logo">Utility Tools</a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../">Home</a></li>
+                <li><a href="../pdf-tools/">PDF Tools</a></li>
+                <li><a href="../resume-tools/">Resume Tools</a></li>
+                <li><a href="../dev-tools/">Developer Tools</a></li>
+                <li><a href="../blog/">Blog</a></li>
+                <li><a href="../pages/about.html">About</a></li>
+                <li><a href="../pages/contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+        </nav>
+    </header>
+
+    <main>
+        <div class="tool-container">
+            <div class="tool-header">
+                <h1>Compress PDF</h1>
+                <p>Reduce PDF file size without losing quality. Perfect for email attachments and web uploads.</p>
+            </div>
+
+            <div id="upload-section">
+                <div
+                    style="padding: 1rem; background: #eff6ff; border-left: 4px solid #3b82f6; border-radius: 6px; margin-bottom: 1.5rem;">
+                    <p style="margin: 0; color: #1e40af; font-weight: 500;"><strong>🔒 Privacy Notice:</strong> All
+                        processing happens locally in your browser. Files are never uploaded or stored. Your PDF remains
+                        completely private and secure.</p>
+                </div>
+                <div class="upload-area" id="upload-area">
+                    <div class="upload-icon">📄</div>
+                    <h3>Drop your PDF here or click to browse</h3>
+                    <p>Maximum file size: 50MB</p>
+                    <label for="file-input" class="sr-only">Select PDF file to compress</label>
+                    <input type="file" id="file-input" accept=".pdf" aria-label="Select PDF file to compress"
+                        style="display: none;">
+                </div>
+
+                <div id="file-info" class="hidden"
+                    style="margin-top: 1rem; padding: 1rem; background: #f3f4f6; border-radius: 6px;">
+                    <p><strong>File:</strong> <span id="file-name"></span></p>
+                    <p><strong>Original Size:</strong> <span id="original-size"></span></p>
+                    <p><strong>Compressed Size:</strong> <span id="compressed-size" class="hidden"></span></p>
+                    <p><strong>Reduction:</strong> <span id="reduction" class="hidden"></span></p>
+                </div>
+
+                <div style="text-align: center; margin-top: 2rem;">
+                    <button class="btn" id="compress-btn" disabled aria-label="Compress PDF file">Compress PDF</button>
+                    <button class="btn btn-secondary hidden" id="download-btn" style="margin-left: 1rem;"
+                        aria-label="Download compressed PDF file">Download Compressed PDF</button>
+                </div>
+            </div>
+
+            <section class="content-section">
+                <h2>How PDF Compression Works</h2>
+                <p>Our PDF compression tool uses advanced algorithms to optimize your PDF files by intelligently
+                    reducing file size while preserving document quality. The compression process analyzes your PDF's
+                    internal structure and applies multiple optimization techniques to achieve the best balance between
+                    file size and visual quality.</p>
+
+                <p>The tool works by:</p>
+                <ul>
+                    <li><strong>Image Optimization:</strong> Compresses images within the PDF using smart compression
+                        algorithms that maintain visual quality while significantly reducing file size. Images are
+                        resampled and optimized based on their content type and importance.</li>
+                    <li><strong>Font Optimization:</strong> Removes unused fonts and optimizes font embedding. Subsets
+                        fonts to include only the characters actually used in your document, reducing font-related file
+                        size.</li>
+                    <li><strong>Metadata Removal:</strong> Strips unnecessary metadata, comments, and document
+                        properties that aren't essential for viewing or printing. This includes author information,
+                        creation dates, and other embedded data.</li>
+                    <li><strong>Object Compression:</strong> Compresses internal PDF objects and streams using efficient
+                        compression algorithms. Removes redundant data and optimizes the PDF's internal structure.</li>
+                    <li><strong>Content Analysis:</strong> Identifies and optimizes duplicate content, unused resources,
+                        and inefficient encoding methods within the PDF structure.</li>
+                </ul>
+                <p>The compression process happens entirely in your browser using client-side JavaScript libraries,
+                    ensuring your documents never leave your device. This provides maximum privacy and security for
+                    sensitive documents like contracts, financial records, or personal information. You maintain
+                    complete control over your files throughout the entire process.</p>
+
+                <h3>Who Should Use PDF Compression?</h3>
+                <p>PDF compression is valuable for anyone who regularly works with PDF documents. Business professionals
+                    often need to compress PDFs before emailing reports or proposals to avoid attachment size limits.
+                    Students can reduce file sizes for assignment submissions. Web developers compress PDFs to improve
+                    website loading times. Graphic designers optimize PDF portfolios for faster sharing. Anyone with
+                    limited storage space or bandwidth can benefit from smaller PDF files.</p>
+
+                <h3>Benefits of Compressing PDFs</h3>
+                <ul>
+                    <li><strong>Faster Email Delivery:</strong> Smaller files send faster and avoid email size limits
+                        (typically 10-25MB). Compressed PDFs are more likely to be successfully delivered without
+                        bounce-backs.</li>
+                    <li><strong>Reduced Storage:</strong> Save significant space on your device or cloud storage.
+                        Compressing multiple PDFs can free up gigabytes of storage space over time.</li>
+                    <li><strong>Faster Loading:</strong> Compressed PDFs load faster on websites and in document
+                        viewers, improving user experience for your audience.</li>
+                    <li><strong>Bandwidth Savings:</strong> Reduce data usage when sharing files, especially important
+                        for mobile users or those with limited internet plans.</li>
+                    <li><strong>Better Compatibility:</strong> Smaller files are more compatible with various email
+                        systems, file sharing platforms, and mobile devices.</li>
+                </ul>
+
+                <h3>Best Practices for PDF Compression</h3>
+                <ul>
+                    <li>Compress PDFs before emailing to avoid size limits and ensure successful delivery</li>
+                    <li>Use compression for web uploads to improve user experience and reduce server storage costs</li>
+                    <li>Keep original files if you need maximum quality for printing or archival purposes</li>
+                    <li>For scanned documents, compression can significantly reduce file size (often 50-80% reduction)
+                        while maintaining readability</li>
+                    <li>Test compressed PDFs before sharing to ensure quality meets your requirements</li>
+                    <li>Compress image-heavy PDFs more aggressively than text-only documents for better results</li>
+                </ul>
+            </section>
+
+            <section class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <div class="faq-question">Will compression reduce PDF quality?</div>
+                    <div class="faq-answer">Our compression algorithm is designed to minimize quality loss. For
+                        text-based PDFs, you'll see minimal to no quality reduction. For image-heavy PDFs, some minor
+                        quality reduction may occur, but the file will remain readable and professional.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How much can I compress a PDF?</div>
+                    <div class="faq-answer">Compression ratios vary based on file content. Text-based PDFs typically
+                        compress by 20-40%, while image-heavy PDFs can compress by 50-80%. Scanned documents often see
+                        the greatest reduction in file size.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Is my PDF safe during compression?</div>
+                    <div class="faq-answer">Absolutely. All processing happens in your browser. Your PDF never leaves
+                        your device, ensuring complete privacy and security.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Can I compress password-protected PDFs?</div>
+                    <div class="faq-answer">Currently, our tool works with unprotected PDFs. Please remove the password
+                        using a PDF editor before compression.</div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Tools</h3>
+                <ul>
+                    <li><a href="../pdf-tools/">PDF Tools</a></li>
+                    <li><a href="../resume-tools/">Resume Tools</a></li>
+                    <li><a href="../dev-tools/">Developer Tools</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="../blog/">Blog</a></li>
+                    <li><a href="../pages/about.html">About Us</a></li>
+                    <li><a href="../pages/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="../pages/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="../pages/terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Utility Tools. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/pdf-compress.js"></script>
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "PDF Compressor",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Compress PDF files online for free. Reduce PDF file size without losing quality.",
+      "featureList": "Compress PDF files, Reduce file size, Maintain quality, Browser-based processing"
+    }
+    </script>
+</body>
+
+</html>
