@@ -24,16 +24,31 @@ body {
   line-height: 1.6;
   color: var(--text-primary);
   background-color: var(--bg-primary);
+  /* Global header offset - ensures content never hidden under sticky header */
+  /* Mobile header height ≈ 80px (default for smaller screens) */
+  padding-top: 80px;
+}
+
+/* Desktop header offset */
+@media (min-width: 769px) {
+  body {
+    /* Desktop header height ≈ 64px */
+    padding-top: 64px;
+  }
 }
 
 /* Header & Navigation */
 header {
   background: var(--bg-primary);
   border-bottom: 1px solid var(--border-color);
-  position: sticky;
+  position: fixed; /* Changed from sticky to fixed for consistent behavior */
   top: 0;
-  z-index: 100;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Increased for proper layering */
   box-shadow: var(--shadow);
+  /* Fixed header height for consistent offset calculation */
+  height: 80px; /* Mobile default */
 }
 
 nav {
@@ -103,6 +118,40 @@ nav {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+}
+
+/* Global Header Offset - Standardized Content Spacing */
+/* Ensures all page content starts below sticky header */
+main.page-content {
+  padding-top: 0;
+  margin-top: 0;
+  scroll-margin-top: 80px; /* For anchor links */
+}
+
+/* Desktop header offset - pages without hero need spacing */
+@media (min-width: 769px) {
+  /* Hero sections handle their own padding, so no offset needed */
+  main.page-content .hero {
+    margin-top: 0;
+    padding-top: 4rem;
+  }
+  
+  /* Pages without hero: add top padding to account for sticky header (≈64-72px) */
+  /* This works with existing inline padding styles */
+  main.page-content > .container:first-child:not(.hero),
+  main.page-content > article:first-child,
+  main.page-content > .tool-container:first-child {
+    padding-top: 3rem; /* Overrides inline padding-top, adds header clearance */
+  }
+  
+  /* Ensure first heading is visible */
+  main.page-content h1:first-child,
+  main.page-content > .container h1:first-child,
+  main.page-content > article > header > h1:first-child,
+  main.page-content > .tool-container > .tool-header > h1:first-child {
+    margin-top: 0;
+    padding-top: 0;
+  }
 }
 
 /* Cards */
@@ -383,7 +432,19 @@ footer {
 }
 
 /* Responsive */
+@media (min-width: 769px) {
+  /* Desktop header height */
+  header {
+    height: 64px;
+  }
+}
+
 @media (max-width: 768px) {
+  /* Mobile header height */
+  header {
+    height: 80px;
+  }
+
   .nav-links {
     display: none;
     position: absolute;

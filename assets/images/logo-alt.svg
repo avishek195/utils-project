@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60">
+  <!-- Grid Icon Alternative -->
+  <g id="icon-grid">
+    <rect x="8" y="8" width="44" height="44" 
+          stroke="#3b82f6" 
+          stroke-width="2.5" 
+          fill="none" 
+          rx="2"/>
+    <line x1="19" y1="8" x2="19" y2="52" 
+          stroke="#3b82f6" 
+          stroke-width="2.5" 
+          opacity="0.4"/>
+    <line x1="30" y1="8" x2="30" y2="52" 
+          stroke="#3b82f6" 
+          stroke-width="2.5" 
+          opacity="0.4"/>
+    <line x1="41" y1="8" x2="41" y2="52" 
+          stroke="#3b82f6" 
+          stroke-width="2.5" 
+          opacity="0.4"/>
+    <line x1="8" y1="19" x2="52" y2="19" 
+          stroke="#3b82f6" 
+          stroke-width="2.5" 
+          opacity="0.4"/>
+    <line x1="8" y1="30" x2="52" y2="30" 
+          stroke="#3b82f6" 
+          stroke-width="2.5" 
+          opacity="0.4"/>
+    <line x1="8" y1="41" x2="52" y2="41" 
+          stroke="#3b82f6" 
+          stroke-width="2.5" 
+          opacity="0.4"/>
+  </g>
+  
+  <!-- Wordmark -->
+  <text x="70" y="38" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+        font-size="24" 
+        font-weight="700" 
+        fill="#1f2937" 
+        letter-spacing="-0.5">
+    ToolWave
+  </text>
+</svg>

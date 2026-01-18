@@ -1,0 +1,503 @@
+/* Mobile-First UX Improvements - max-width: 768px */
+
+/* ============================================
+   1. MOBILE-FIRST TYPOGRAPHY
+   ============================================ */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    line-height: 1.3;
+    margin-bottom: 0.75rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    margin-bottom: 0.75rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.75rem;
+    line-height: 1.3;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .tool-header h1 {
+    font-size: 1.75rem;
+    line-height: 1.3;
+  }
+
+  .tool-header p {
+    font-size: 1rem;
+  }
+
+  .content-section h2 {
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+
+  .content-section h3 {
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .content-section p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}
+
+/* ============================================
+   2. SPACING & TOUCH COMFORT
+   ============================================ */
+@media (max-width: 768px) {
+  /* Increase vertical spacing between sections */
+  .content-section {
+    margin: 2.5rem 0;
+  }
+
+  .tool-container {
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+  }
+
+  .tool-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .faq-section {
+    margin: 2.5rem 0;
+  }
+
+  .faq-item {
+    margin-bottom: 1.25rem;
+    padding: 1.25rem;
+  }
+
+  /* Ensure 44px minimum touch targets */
+  .btn {
+    min-height: 44px;
+    padding: 0.875rem 1.25rem;
+    font-size: 1rem;
+  }
+
+  input[type="file"] {
+    min-height: 44px;
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+
+  textarea {
+    min-height: 120px;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .nav-links a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 0;
+  }
+
+  .footer-section a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+  }
+
+  /* Avoid cramped layouts */
+  .card-grid {
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+}
+
+/* ============================================
+   3. FULL-WIDTH INTERACTIONS
+   ============================================ */
+@media (max-width: 768px) {
+  /* Make primary buttons full-width */
+  .btn {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-bottom: 0.75rem;
+  }
+
+  .btn + .btn {
+    margin-left: 0;
+  }
+
+  /* File upload areas - clear and easy to tap */
+  .upload-area {
+    padding: 2rem 1.5rem;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .upload-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .upload-area h3 {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .upload-area p {
+    font-size: 0.9rem;
+  }
+
+  /* Input fields full-width */
+  input[type="text"],
+  input[type="file"],
+  textarea,
+  select {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* ============================================
+   4. TOOL UI FEEDBACK
+   ============================================ */
+@media (max-width: 768px) {
+  /* Improve loading state visibility */
+  .spinner {
+    width: 48px;
+    height: 48px;
+    border-width: 4px;
+  }
+
+  /* Make alerts more visible but non-intrusive */
+  .alert {
+    padding: 1.25rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+    border-radius: 8px;
+  }
+
+  .alert-success,
+  .alert-error,
+  .alert-info {
+    border-width: 2px;
+  }
+
+  /* Disabled button state - already handled but ensure visibility */
+  .btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+/* ============================================
+   5. CARD-BASED LAYOUT (MOBILE)
+   ============================================ */
+@media (max-width: 768px) {
+  /* Wrap tool interfaces in soft cards */
+  .tool-container {
+    background: var(--bg-primary);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--border-color);
+  }
+
+  /* Upload area as card */
+  .upload-area {
+    border-radius: 10px;
+    background: var(--bg-secondary);
+  }
+
+  /* Results sections as cards */
+  #results,
+  #file-info,
+  #score-section,
+  #keyword-analysis,
+  #suggestions,
+  #stats {
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Subtle shadows and rounded corners */
+  .card {
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  }
+
+  .faq-item {
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+}
+
+/* ============================================
+   6. MOBILE NAVIGATION SAFETY
+   ============================================ */
+@media (max-width: 768px) {
+  /* Header spacing fix - ensure header has proper height */
+  header {
+    position: fixed; /* Matches main CSS - header is fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 80px; /* Fixed height matches body padding-top */
+  }
+
+  nav {
+    padding: 1rem 1.25rem;
+    position: relative;
+    min-height: 60px;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+
+  /* Mobile nav menu - positioned fixed below header */
+  .nav-links {
+    display: none; /* Hidden by default */
+    position: fixed;
+    /* Header height is fixed at 80px on mobile */
+    top: 80px; /* Matches header height */
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    gap: 0;
+    border-top: 1px solid var(--border-color);
+    z-index: 999;
+    max-height: calc(100vh - 80px); /* Account for 80px header */
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Show menu when active */
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .nav-links li:last-child {
+    border-bottom: none;
+  }
+
+  .nav-links a {
+    padding: 1rem;
+    display: block;
+    width: 100%;
+  }
+
+  .mobile-menu-toggle {
+    min-width: 44px;
+    min-height: 44px;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    z-index: 1001;
+    position: relative;
+  }
+
+  /* Prevent body scroll when menu is open */
+  body.menu-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+  }
+}
+
+/* ============================================
+   7. FOOTER OPTIMIZATION
+   ============================================ */
+@media (max-width: 768px) {
+  footer {
+    padding: 2.5rem 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-section {
+    margin-bottom: 1rem;
+  }
+
+  .footer-section h3 {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+  }
+
+  .footer-section ul {
+    margin-left: 0;
+  }
+
+  .footer-section ul li {
+    margin-bottom: 0.75rem;
+  }
+
+  .footer-section a {
+    font-size: 0.95rem;
+    padding: 0.5rem 0;
+  }
+
+  .footer-bottom {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}
+
+/* ============================================
+   ADDITIONAL MOBILE POLISH
+   ============================================ */
+@media (max-width: 768px) {
+  /* Global Header Offset - Mobile (Standardized) */
+  /* Uses .page-content class for consistent spacing across all pages */
+  main.page-content {
+    padding-top: 0;
+    margin-top: 0;
+    scroll-margin-top: 75px; /* Account for sticky header when scrolling to anchors */
+  }
+
+  /* Mobile header offset - pages without hero need spacing */
+  /* Hero sections handle their own padding */
+  main.page-content .hero {
+    margin-top: 0;
+    padding-top: 3rem;
+  }
+
+  /* Pages without hero: add top padding to account for sticky header (≈65-70px) */
+  /* This works with existing inline padding styles */
+  main.page-content > .container:first-child:not(.hero),
+  main.page-content > article:first-child,
+  main.page-content > .tool-container:first-child {
+    padding-top: 3rem; /* Overrides inline padding-top, adds header clearance */
+  }
+
+  /* Ensure first heading is visible on mobile */
+  main.page-content h1:first-child,
+  main.page-content > .container h1:first-child,
+  main.page-content > article > header > h1:first-child,
+  main.page-content > .tool-container > .tool-header > h1:first-child {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  /* Container padding */
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  /* Hero section mobile optimization */
+  .hero {
+    padding: 3rem 1.5rem;
+  }
+
+  /* Content section spacing */
+  .content-section ul {
+    margin-left: 1.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .content-section li {
+    margin-bottom: 0.75rem;
+    line-height: 1.7;
+  }
+
+  /* Code blocks mobile friendly */
+  .code-block {
+    font-size: 0.85rem;
+    padding: 1rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Privacy notices mobile */
+  .alert-info,
+  div[style*="background: #eff6ff"],
+  div[style*="background: #f0f9ff"] {
+    padding: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    border-radius: 8px;
+  }
+
+  /* File info display */
+  #file-info {
+    padding: 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  /* Score display mobile */
+  #score-display {
+    font-size: 2.5rem !important;
+  }
+
+  /* JSON editor mobile (already handled in inline styles but ensure consistency) */
+  .json-editor {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .json-input,
+  .json-output {
+    min-height: 300px;
+    font-size: 0.85rem;
+  }
+
+  /* Textarea mobile optimization */
+  textarea {
+    resize: vertical;
+    -webkit-appearance: none;
+    border-radius: 8px;
+  }
+
+  /* Input file mobile */
+  input[type="file"] {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+  }
+}

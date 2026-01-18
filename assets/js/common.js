@@ -4,10 +4,59 @@
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
     const navLinks = document.getElementById('nav-links');
+    const header = document.querySelector('header');
     
     if (mobileMenuToggle && navLinks) {
+        // Function to calculate and set menu position based on header height
+        function setMenuPosition() {
+            if (window.innerWidth <= 768 && header) {
+                const headerHeight = header.offsetHeight;
+                navLinks.style.top = headerHeight + 'px';
+                navLinks.style.maxHeight = 'calc(100vh - ' + headerHeight + 'px)';
+            }
+        }
+
+        // Set initial position
+        setMenuPosition();
+        
+        // Update position on resize - use throttle for performance
+        let resizeTimeout;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(setMenuPosition, 150);
+        }, { passive: true });
+
         mobileMenuToggle.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
+            const isActive = navLinks.classList.toggle('active');
+            
+            // Update position when toggling (in case header height changed)
+            setMenuPosition();
+            
+            // Prevent body scroll when menu is open
+            if (isActive) {
+                document.body.classList.add('menu-open');
+            } else {
+                document.body.classList.remove('menu-open');
+            }
+        });
+
+        // Close menu when clicking outside or on a link - use passive for performance
+        document.addEventListener('click', function(event) {
+            const isClickInsideNav = navLinks.contains(event.target);
+            const isClickOnToggle = mobileMenuToggle.contains(event.target);
+            
+            if (!isClickInsideNav && !isClickOnToggle && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            }
+        }, { passive: true });
+
+        // Close menu when clicking on a nav link
+        navLinks.addEventListener('click', function(event) {
+            if (event.target.tagName === 'A') {
+                navLinks.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            }
         });
     }
 });
