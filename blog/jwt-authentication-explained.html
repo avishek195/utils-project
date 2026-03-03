@@ -8,6 +8,15 @@
         content="Understand JWT authentication step by step. Learn what JSON Web Tokens are, how they work, and how to safely debug them.">
     <meta name="keywords"
         content="jwt authentication, json web token, jwt explained, jwt for beginners, auth tokens, developer security">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-74ZD8RXD4F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-74ZD8RXD4F');
+    </script>
 
     <!-- Open Graph -->
     <meta property="og:title" content="JWT Authentication Explained for Beginners">
@@ -20,8 +29,7 @@
     <meta name="twitter:title" content="JWT Authentication Explained for Beginners">
 
     <!-- Google AdSense verification -->
-    <script async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6911249121848026"
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6911249121848026"
         crossorigin="anonymous"></script>
 
     <title>JWT Authentication Explained for Beginners | ToolWave Blog</title>
@@ -61,7 +69,8 @@
 
                 <p>In this beginner-friendly guide, we will break down what JWTs are, how JWT authentication works, and
                     how you can safely inspect tokens using tools like the ToolWave
-                    <a href="../dev-tools/jwt-decoder.html">JWT Decoder</a>.</p>
+                    <a href="../dev-tools/jwt-decoder.html">JWT Decoder</a>.
+                </p>
 
                 <h2>What Is a JSON Web Token (JWT)?</h2>
                 <p>A JSON Web Token is a compact, URL-safe string that encodes a set of claims about a user or client.
@@ -109,7 +118,8 @@
                     <li><strong>roles / scope:</strong> Application-specific permissions or roles.</li>
                 </ul>
 
-                <p>Our <a href="../dev-tools/jwt-decoder.html">JWT Decoder</a> highlights these claims so you can quickly
+                <p>Our <a href="../dev-tools/jwt-decoder.html">JWT Decoder</a> highlights these claims so you can
+                    quickly
                     understand who a token belongs to and when it expires.</p>
 
                 <h2>Why Use JWTs Instead of Traditional Sessions?</h2>
@@ -137,7 +147,8 @@
                         cookies to reduce XSS risk.</li>
                     <li><strong>Validate Audience and Issuer:</strong> Make sure the token is really meant for your API.
                     </li>
-                    <li><strong>Rotate Signing Keys:</strong> Occasionally change keys and handle token invalidation.</li>
+                    <li><strong>Rotate Signing Keys:</strong> Occasionally change keys and handle token invalidation.
+                    </li>
                 </ul>
 
                 <p>When debugging tokens, using a local, browser-based decoder like ToolWave’s is safer than sending
@@ -151,7 +162,8 @@
                         token.</li>
                     <li><strong>Use Local Tools:</strong> Decode tokens directly in the browser using
                         <a href="../dev-tools/jwt-decoder.html">ToolWave’s JWT Decoder</a>, which never uploads
-                        tokens.</li>
+                        tokens.
+                    </li>
                     <li><strong>Do Not Paste Production Tokens Into Unknown Sites:</strong> They might log or reuse
                         them.</li>
                 </ol>
@@ -237,4 +249,3 @@
 </body>
 
 </html>
-
