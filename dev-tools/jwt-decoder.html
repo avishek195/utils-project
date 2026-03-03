@@ -127,6 +127,27 @@
             </div>
 
             <section class="content-section">
+                <h2>What This Tool Does</h2>
+                <p>The ToolWave JWT Decoder helps you inspect JSON Web Tokens safely and quickly by splitting a JWT into
+                    its three parts (header, payload, and signature) and decoding the Base64URL content into readable
+                    JSON. This makes it easier to debug authentication flows, verify what claims are present, and check
+                    timestamps such as token expiration.</p>
+                <p>JWTs often appear in API requests as a Bearer token. When something goes wrong — an “unauthorized”
+                    response, a missing role, or an unexpected expiration — you typically need to look inside the token.
+                    This tool gives you a clear view of the token’s structure directly in the browser so you can
+                    troubleshoot faster.</p>
+
+                <h2>How to Use</h2>
+                <ol>
+                    <li>Paste your JWT into the input box.</li>
+                    <li>Click <strong>Decode JWT</strong>.</li>
+                    <li>Review the decoded <strong>Header</strong> and <strong>Payload</strong> sections to understand
+                        claims like <code>iss</code>, <code>aud</code>, <code>sub</code>, <code>exp</code>,
+                        <code>iat</code>, and any app-specific roles/scopes.
+                    </li>
+                    <li>Use <strong>Clear</strong> to remove the token when you’re done.</li>
+                </ol>
+
                 <h2>How JWT Decoding Works</h2>
                 <p>A JWT (JSON Web Token) is a compact, URL-safe token format used for securely transmitting information
                     between parties. JWTs are commonly used for authentication and authorization in modern web
@@ -223,6 +244,33 @@
                     <li><strong>Token Storage:</strong> Store tokens securely in your application. Use httpOnly cookies
                         for web applications or secure storage mechanisms for mobile apps.</li>
                 </ul>
+
+                <h3>Benefits of Using the Online Version</h3>
+                <ul>
+                    <li><strong>Fast debugging:</strong> Inspect claims and timestamps without writing custom scripts.
+                    </li>
+                    <li><strong>No installation:</strong> Works anywhere you have a browser, including locked-down
+                        systems.</li>
+                    <li><strong>Better safety posture:</strong> Helps you avoid sending tokens to unknown third-party
+                        services.</li>
+                </ul>
+
+                <h3>Privacy &amp; Security</h3>
+                <p>This decoder runs entirely in your browser. Your token is not uploaded to ToolWave servers, and we do
+                    not store or log the JWT you paste. Still, JWTs are sensitive credentials — only decode tokens you
+                    own or have permission to inspect, and avoid using live production tokens in shared environments.
+                </p>
+
+                <h3>Related Tools</h3>
+                <ul>
+                    <li><a href="../dev-tools/json-formatter.html">JSON Formatter</a> — format and validate JSON
+                        payloads
+                        while debugging APIs.</li>
+                    <li><a href="../blog/jwt-authentication-explained.html">JWT Authentication Explained</a> — a
+                        beginner-friendly guide to JWT structure and best practices.</li>
+                    <li><a href="../blog/client-side-vs-server-side-tools.html">Client-Side vs Server-Side Tools</a> —
+                        understand privacy and security tradeoffs.</li>
+                </ul>
             </section>
 
             <section class="faq-section">
@@ -255,7 +303,10 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h3>Tools</h3>
+                <h3>About ToolWave</h3>
+                <p style="margin-bottom: 0.75rem; color: #d1d5db;">ToolWave provides free, privacy-first browser-based
+                    tools for PDFs, resumes, and developers. All file processing happens locally in your browser – your
+                    documents never leave your device.</p>
                 <ul>
                     <li><a href="../pdf-tools/">PDF Tools</a></li>
                     <li><a href="../resume-tools/">Resume Tools</a></li>
@@ -274,12 +325,13 @@
                 <h3>Legal</h3>
                 <ul>
                     <li><a href="../pages/privacy-policy.html">Privacy Policy</a></li>
-                    <li><a href="../pages/terms.html">Terms of Service</a></li>
+                    <li><a href="../pages/terms.html">Terms &amp; Conditions</a></li>
+                    <li><a href="../pages/disclaimer.html">Disclaimer</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 ToolWave.org. All rights reserved.</p>
+            <p>&copy; 2026 ToolWave.org. All rights reserved. No files are uploaded or stored on our servers.</p>
         </div>
     </footer>
 

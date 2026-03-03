@@ -6,120 +6,186 @@
     
     <!-- Homepage -->
     <url>
-        <loc>https://www.toolwave.org/</loc>
-        <lastmod>2026-01-17</lastmod>
+        <loc>https://toolwave.org/</loc>
+        <lastmod>2026-03-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     
     <!-- PDF Tools -->
     <url>
-        <loc>https://www.toolwave.org/pdf-tools/</loc>
-        <lastmod>2026-01-17</lastmod>
+        <loc>https://toolwave.org/pdf-tools/</loc>
+        <lastmod>2026-03-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://www.toolwave.org/pdf-tools/compress-pdf.html</loc>
-        <lastmod>2026-01-17</lastmod>
+        <loc>https://toolwave.org/pdf-tools/compress-pdf.html</loc>
+        <lastmod>2026-03-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.toolwave.org/pdf-tools/merge-pdf.html</loc>
-        <lastmod>2026-01-17</lastmod>
+        <loc>https://toolwave.org/pdf-tools/merge-pdf.html</loc>
+        <lastmod>2026-03-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.toolwave.org/pdf-tools/pdf-to-image.html</loc>
-        <lastmod>2026-01-17</lastmod>
+        <loc>https://toolwave.org/pdf-tools/pdf-to-image.html</loc>
+        <lastmod>2026-03-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <!-- Resume Tools -->
     <url>
-        <loc>https://www.toolwave.org/resume-tools/</loc>
-        <lastmod>2026-01-17</lastmod>
+        <loc>https://toolwave.org/resume-tools/</loc>
+        <lastmod>2026-03-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://www.toolwave.org/resume-tools/ats-checker.html</loc>
-        <lastmod>2026-01-17</lastmod>
+        <loc>https://toolwave.org/resume-tools/ats-checker.html</loc>
+        <lastmod>2026-03-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.toolwave.org/resume-tools/resume-formatter.html</loc>
-        <lastmod>2026-01-17</lastmod>
+        <loc>https://toolwave.org/resume-tools/resume-formatter.html</loc>
+        <lastmod>2026-03-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <!-- Developer Tools -->
     <url>
-        <loc>https://www.toolwave.org/dev-tools/</loc>
-        <lastmod>2026-01-17</lastmod>
+        <loc>https://toolwave.org/dev-tools/</loc>
+        <lastmod>2026-03-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://www.toolwave.org/dev-tools/json-formatter.html</loc>
-        <lastmod>2026-01-17</lastmod>
+        <loc>https://toolwave.org/dev-tools/json-formatter.html</loc>
+        <lastmod>2026-03-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.toolwave.org/dev-tools/jwt-decoder.html</loc>
-        <lastmod>2026-01-17</lastmod>
+        <loc>https://toolwave.org/dev-tools/jwt-decoder.html</loc>
+        <lastmod>2026-03-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <!-- Blog -->
     <url>
-        <loc>https://www.toolwave.org/blog/</loc>
-        <lastmod>2026-01-17</lastmod>
+        <loc>https://toolwave.org/blog/</loc>
+        <lastmod>2026-03-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.toolwave.org/blog/how-to-compress-pdf.html</loc>
-        <lastmod>2026-01-17</lastmod>
+        <loc>https://toolwave.org/blog/how-ats-systems-work-2026.html</loc>
+        <lastmod>2026-03-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://www.toolwave.org/blog/ats-resume-tips.html</loc>
-        <lastmod>2026-01-17</lastmod>
+        <loc>https://toolwave.org/blog/ats-resume-tips.html</loc>
+        <lastmod>2026-03-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://toolwave.org/blog/top-resume-mistakes.html</loc>
+        <lastmod>2026-03-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://toolwave.org/blog/resume-keywords-by-industry.html</loc>
+        <lastmod>2026-03-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://toolwave.org/blog/how-to-compress-pdf.html</loc>
+        <lastmod>2026-03-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://toolwave.org/blog/pdf-compression-explained.html</loc>
+        <lastmod>2026-03-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://toolwave.org/blog/reduce-pdf-size-without-losing-quality.html</loc>
+        <lastmod>2026-03-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://toolwave.org/blog/what-is-json-formatting.html</loc>
+        <lastmod>2026-03-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://toolwave.org/blog/jwt-authentication-explained.html</loc>
+        <lastmod>2026-03-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://toolwave.org/blog/client-side-vs-server-side-tools.html</loc>
+        <lastmod>2026-03-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://toolwave.org/blog/browser-based-tools-future.html</loc>
+        <lastmod>2026-03-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://toolwave.org/blog/online-utility-tools-guide.html</loc>
+        <lastmod>2026-03-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     
     <!-- Pages -->
     <url>
-        <loc>https://www.toolwave.org/pages/about.html</loc>
-        <lastmod>2026-01-17</lastmod>
+        <loc>https://toolwave.org/pages/about.html</loc>
+        <lastmod>2026-03-03</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://www.toolwave.org/pages/contact.html</loc>
-        <lastmod>2026-01-17</lastmod>
+        <loc>https://toolwave.org/pages/contact.html</loc>
+        <lastmod>2026-03-03</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://www.toolwave.org/pages/privacy-policy.html</loc>
-        <lastmod>2026-01-17</lastmod>
+        <loc>https://toolwave.org/pages/privacy-policy.html</loc>
+        <lastmod>2026-03-03</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
     <url>
-        <loc>https://www.toolwave.org/pages/terms.html</loc>
-        <lastmod>2026-01-17</lastmod>
+        <loc>https://toolwave.org/pages/terms.html</loc>
+        <lastmod>2026-03-03</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://toolwave.org/pages/disclaimer.html</loc>
+        <lastmod>2026-03-03</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>

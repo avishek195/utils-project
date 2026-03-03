@@ -20,8 +20,7 @@
     <meta name="twitter:title" content="Client-Side vs Server-Side Tools: Which Is More Secure?">
 
     <!-- Google AdSense verification -->
-    <script async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6911249121848026"
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6911249121848026"
         crossorigin="anonymous"></script>
 
     <title>Client-Side vs Server-Side Tools: Which Is More Secure? | ToolWave Blog</title>
@@ -65,7 +64,8 @@
                     <strong>client-side-first</strong> platform, which means tools like our
                     <a href="../pdf-tools/compress-pdf.html">PDF compressor</a>,
                     <a href="../dev-tools/json-formatter.html">JSON formatter</a>, and
-                    <a href="../dev-tools/jwt-decoder.html">JWT decoder</a> all run securely in your browser.</p>
+                    <a href="../dev-tools/jwt-decoder.html">JWT decoder</a> all run securely in your browser.
+                </p>
 
                 <h2>What Are Client-Side Tools?</h2>
                 <p>Client-side tools perform all core processing on your device, inside your web browser. The logic is
@@ -103,7 +103,8 @@
 
                 <h2>Security and Privacy: Which Is Safer?</h2>
                 <p>Security depends on implementation, but from a purely data exposure perspective:
-                    <strong>client-side tools minimize how far your data travels.</strong></p>
+                    <strong>client-side tools minimize how far your data travels.</strong>
+                </p>
 
                 <h3>Advantages of Client-Side Tools</h3>
                 <ul>
@@ -143,7 +144,8 @@
 
                 <p>ToolWave specifically focuses on tasks that are a great fit for client-side execution. Our
                     <a href="../pdf-tools/pdf-to-image.html">PDF to Image converter</a>, for example, runs inside the
-                    browser and streams results directly to a downloadable file, avoiding any external transfer.</p>
+                    browser and streams results directly to a downloadable file, avoiding any external transfer.
+                </p>
 
                 <h2>Threat Models to Consider</h2>
                 <p>When deciding which type of tool to use, think about your threat model—what could realistically go
@@ -154,7 +156,8 @@
                         storage is insecure or logs are retained. A client-side PDF compressor is safer here.</li>
                     <li><strong>JWTs and Access Tokens:</strong> Tokens often grant direct access to APIs or user
                         accounts. Never paste live tokens into random web tools. A browser-only
-                        <a href="../dev-tools/jwt-decoder.html">JWT decoder</a> is much safer.</li>
+                        <a href="../dev-tools/jwt-decoder.html">JWT decoder</a> is much safer.
+                    </li>
                     <li><strong>Public Marketing PDFs:</strong> Compressing or merging public brochures is relatively
                         low risk, even on server tools, but client-side still avoids unnecessary exposure.</li>
                 </ul>
@@ -171,7 +174,8 @@
 
                 <p>This is especially important for our <a href="../resume-tools/ats-checker.html">ATS Checker</a> and
                     <a href="../resume-tools/resume-formatter.html">Resume Formatter</a>, where users paste sensitive
-                    career history and contact details.</p>
+                    career history and contact details.
+                </p>
 
                 <h2>When Server-Side Tools Still Make Sense</h2>
                 <p>Despite the advantages of browser-based utilities, there are still cases where server-side tools are
@@ -179,12 +183,14 @@
                 <ul>
                     <li><strong>Very Large Files:</strong> Gigabyte-scale documents may exceed browser memory limits.
                     </li>
-                    <li><strong>Team Collaboration:</strong> Multi-user editing and comments require server storage.</li>
+                    <li><strong>Team Collaboration:</strong> Multi-user editing and comments require server storage.
+                    </li>
                     <li><strong>Enterprise Integrations:</strong> Some workflows must connect directly to internal
                         systems behind firewalls.</li>
                 </ul>
 
-                <p>In those scenarios, you should choose vendors with strong security documentation, clear data-retention
+                <p>In those scenarios, you should choose vendors with strong security documentation, clear
+                    data-retention
                     policies, and compliance certifications where needed.</p>
 
                 <h2>Practical Checklist: Choosing the Right Type of Tool</h2>
@@ -202,8 +208,10 @@
                     device, you dramatically reduce the risk of leaks, misconfigurations, or misuse.</p>
 
                 <p>ToolWave focuses deliberately on client-side utilities, from <a href="../pdf-tools/">PDF tools</a> to
-                    <a href="../resume-tools/">resume optimization</a> and <a href="../dev-tools/">developer helpers</a>,
-                    so you can work faster without sacrificing control over your information.</p>
+                    <a href="../resume-tools/">resume optimization</a> and <a href="../dev-tools/">developer
+                        helpers</a>,
+                    so you can work faster without sacrificing control over your information.
+                </p>
 
                 <p style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #e5e7eb;">
                     <strong>Want to try truly privacy-first tools?</strong>
@@ -216,7 +224,10 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h3>Tools</h3>
+                <h3>About ToolWave</h3>
+                <p style="margin-bottom: 0.75rem; color: #d1d5db;">ToolWave provides free, privacy-first browser-based
+                    tools for PDFs, resumes, and developers. All file processing happens locally in your browser – your
+                    documents never leave your device.</p>
                 <ul>
                     <li><a href="../pdf-tools/">PDF Tools</a></li>
                     <li><a href="../resume-tools/">Resume Tools</a></li>
@@ -235,12 +246,13 @@
                 <h3>Legal</h3>
                 <ul>
                     <li><a href="../pages/privacy-policy.html">Privacy Policy</a></li>
-                    <li><a href="../pages/terms.html">Terms of Service</a></li>
+                    <li><a href="../pages/terms.html">Terms &amp; Conditions</a></li>
+                    <li><a href="../pages/disclaimer.html">Disclaimer</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 ToolWave.org. All rights reserved.</p>
+            <p>&copy; 2026 ToolWave.org. All rights reserved. No files are uploaded or stored on our servers.</p>
         </div>
     </footer>
 
@@ -248,4 +260,3 @@
 </body>
 
 </html>
-

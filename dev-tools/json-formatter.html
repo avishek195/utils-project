@@ -133,6 +133,30 @@
             </div>
 
             <section class="content-section">
+                <h2>What This Tool Does</h2>
+                <p>The ToolWave JSON Formatter helps you quickly turn raw JSON into something you can read, validate,
+                    and share. It supports three common workflows that show up every day in development and data work:
+                    formatting (pretty-printing), validation (finding syntax errors), and minification (making JSON as
+                    small as possible for production).</p>
+                <p>When you paste JSON into the input box, the tool attempts to parse it as strict JSON. If parsing
+                    succeeds, the formatter outputs a clean, consistently indented version so nested objects and arrays
+                    are easy to follow. If parsing fails, the validator surfaces an error so you can locate and fix the
+                    issue quickly (missing commas, unmatched brackets, invalid quotes, and similar problems).</p>
+                <p>Because this tool is browser-based, it’s ideal for quick debugging: inspect API responses, clean up
+                    webhook payloads, review configuration files, and prepare readable JSON snippets for documentation
+                    or code reviews — without installing anything.</p>
+
+                <h2>How to Use</h2>
+                <ol>
+                    <li>Paste your JSON into the <strong>Input JSON</strong> box.</li>
+                    <li>Click <strong>Format JSON</strong> to prettify the output with indentation and spacing.</li>
+                    <li>Click <strong>Validate</strong> to check whether the JSON is valid and identify issues if it’s
+                        not.</li>
+                    <li>Click <strong>Minify JSON</strong> to remove whitespace and generate a compact one-line JSON
+                        string.</li>
+                    <li>Click <strong>Copy Output</strong> to copy the formatted result for use in your project.</li>
+                </ol>
+
                 <h2>How JSON Formatting Works</h2>
                 <p>Our JSON formatter parses your JSON input using advanced parsing algorithms and formats it with
                     proper indentation, line breaks, and syntax highlighting. The tool performs comprehensive validation
@@ -217,6 +241,32 @@
                     <li><strong>Validate Data Types:</strong> Ensure numbers, booleans, and null values are not quoted
                         (they should be literal values, not strings).</li>
                 </ul>
+
+                <h3>Benefits of Using the Online Version</h3>
+                <ul>
+                    <li><strong>Fast workflow:</strong> Format and validate payloads instantly while debugging APIs.
+                    </li>
+                    <li><strong>No installation:</strong> Works on any device with a modern browser.</li>
+                    <li><strong>Easy sharing:</strong> Produce readable JSON for tickets, docs, and code reviews.</li>
+                    <li><strong>Production-ready output:</strong> Minify JSON for smaller payloads and faster transfer.
+                    </li>
+                </ul>
+
+                <h3>Privacy &amp; Security</h3>
+                <p>This formatter runs entirely in your browser using client-side JavaScript. Your JSON is not uploaded
+                    to ToolWave servers, and we do not store or log your input. For sensitive payloads (user data,
+                    access tokens, internal IDs), this local-processing model reduces exposure compared to tools that
+                    send data to remote servers.</p>
+
+                <h3>Related Tools</h3>
+                <ul>
+                    <li><a href="../dev-tools/jwt-decoder.html">JWT Decoder</a> — inspect and decode JWT headers and
+                        payloads.</li>
+                    <li><a href="../pdf-tools/">PDF Tools</a> — compress, merge, and convert PDFs privately in your
+                        browser.</li>
+                    <li><a href="../resume-tools/">Resume Tools</a> — improve ATS readability with browser-based resume
+                        utilities.</li>
+                </ul>
             </section>
 
             <section class="faq-section">
@@ -248,7 +298,10 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h3>Tools</h3>
+                <h3>About ToolWave</h3>
+                <p style="margin-bottom: 0.75rem; color: #d1d5db;">ToolWave provides free, privacy-first browser-based
+                    tools for PDFs, resumes, and developers. All file processing happens locally in your browser – your
+                    documents never leave your device.</p>
                 <ul>
                     <li><a href="../pdf-tools/">PDF Tools</a></li>
                     <li><a href="../resume-tools/">Resume Tools</a></li>
@@ -267,12 +320,13 @@
                 <h3>Legal</h3>
                 <ul>
                     <li><a href="../pages/privacy-policy.html">Privacy Policy</a></li>
-                    <li><a href="../pages/terms.html">Terms of Service</a></li>
+                    <li><a href="../pages/terms.html">Terms &amp; Conditions</a></li>
+                    <li><a href="../pages/disclaimer.html">Disclaimer</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 ToolWave.org. All rights reserved.</p>
+            <p>&copy; 2026 ToolWave.org. All rights reserved. No files are uploaded or stored on our servers.</p>
         </div>
     </footer>
 
